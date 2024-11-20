@@ -8,24 +8,19 @@
     <title>Breakpoints & Media Queries</title>
   </head>
   <!-- Tailwind is mobile-first -->
-  <body
-    class="bg-black sm:bg-green-800 md:bg-blue-800 lg:bg-yellow-800 xl:bg-purple-800 2xl:bg-orange-800"
-  >
-    <h1 class="text-white text-xl md:text-3xl xl:text-5xl">
+  <body class="bg-yellow-200 sm:bg-rose-300 md:bg-sky-300 lg:bg-orange-300 xl:bg-violet-300 2xl:bg-red-300">
+    <h1 class="text-white text-xl sm:text-2xl md:text-3xl xl:text-5xl 2xl:text-9xl">
       Tailwind is awesome
     </h1>
 
     <script>
-      function showBrowserWidth() {
-        const width =
-          window.innerWidth ||
-          document.documentElement.clientWidth ||
-          document.body.clientWidth
+    function showBrowserWidth() {
+      const width = window.innerWidth;
 
-        document.querySelector('h1').innerHTML = `Width: ${width}`
-      }
-      window.onload = showBrowserWidth
-      window.onresize = showBrowserWidth
+      document.querySelector('h1').innerText = `width: ${width}`;
+    }
+    window.onload = showBrowserWidth
+    window.onresize = showBrowserWidth
     </script>
   </body>
 </html>
